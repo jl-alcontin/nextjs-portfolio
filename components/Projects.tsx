@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { url } from "inspector";
 import React from "react";
 import { urlFor } from "../sanity";
 import { Project } from "../typings";

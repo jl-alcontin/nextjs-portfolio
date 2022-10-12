@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
-import require from "react";
 import React from "react";
-import Image from "next/image";
-import profilepic from "../public/assets/me.png";
 import { PageInfo } from "../typings";
-import { url } from "inspector";
 import { urlFor } from "../sanity";
 
 type Props = {

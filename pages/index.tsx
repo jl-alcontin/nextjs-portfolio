@@ -1,4 +1,5 @@
 import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
+import { Fragment } from "react"
 import Header from "../components/header";
 import Head from "next/head";
 import Hero from "../components/hero";

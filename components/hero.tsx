@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import profilepic from "../public/assets/me.png";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";

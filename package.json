@@ -21,7 +21,8 @@
     "react-hook-form": "^7.37.0",
     "react-simple-typewriter": "^4.0.5",
     "react-social-icons": "^5.15.0",
-    "sudo": "^1.0.3"
+    "sudo": "^1.0.3",
+    "vercel": "^28.4.10"
   },
   "devDependencies": {
     "@types/node": "18.8.4",

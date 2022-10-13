@@ -40,7 +40,7 @@ export default function About({ pageInfo }: Props) {
 
       <div className="space-y-10 -mt-5 px-0 md:px-10">
         <h4 className="text-2xl md:text-4xl font-semibold">
-          this is {"<JLA />"} <span>{"<JLA />"}</span>
+          this is {pageInfo?.name}
         </h4>
         <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>

@@ -1,5 +1,5 @@
 import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
-import { Fragment } from "react"
+import { Fragment } from "react";
 import Header from "../components/header";
 import Head from "next/head";
 import Hero from "../components/hero";
@@ -26,7 +26,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#FB2576]/50 hover:scrollbar-thumb-[#FB2576]/80 scrollbar-thumb-rounded-full">
       <Head>
         <title>{pageInfo?.name} - Portfolio</title>
       </Head>
@@ -35,27 +35,27 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 
       {/* {hero} */}
       <section id="hero" className="snap-start">
-        <Hero pageInfo = {pageInfo} />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* {about} */}
       <section id="about" className="snap-center">
-        <About pageInfo = {pageInfo} />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* {experience} */}
       <section id="experience" className="snap-center">
-        <WorkExperience experiences = {experiences} />
+        <WorkExperience experiences={experiences} />
       </section>
 
       {/* {skills} */}
       <section id="skills" className="snap-start">
-        <Skills skills = {skills} />
+        <Skills skills={skills} />
       </section>
 
       {/* {projects} */}
       <section id="projects" className="snap-start">
-        <Projects projects = {projects} />
+        <Projects projects={projects} />
       </section>
 
       {/* {contact me} */}
@@ -63,17 +63,17 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-ceter justify-center">
+      <footer className="sticky bottom-5 w-full z-0">
+        <div className="flex items-ceter justify-center z-0">
+          <Link href="#hero" className="z-50">
             <img
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer "
               src="http://www.rirca.es/wp-content/uploads/2016/09/super_saiyan_rose_by_rmehedi-dafyvt9.jpg"
               alt=""
             />
-          </div>
-        </footer>
-      </Link>
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
 import { PageInfo } from "../typings";
 import { urlFor } from "../sanity";
+import { motion } from "framer-motion";
 
 type Props = {
   pageInfo: PageInfo;
@@ -11,7 +12,7 @@ type Props = {
 
 export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: [`Hi, My name is ${pageInfo?.name}`, "This-is-for-the-test"],
+    words: [`Hi, My name is ${pageInfo?.name}`, "<Jesrel />"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -19,7 +20,9 @@ export default function Hero({ pageInfo }: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <div className="h-32 w-32">
-        <img
+        <motion.img
+          drag
+          dragConstraints={{left: -300, right: 300, top: -300, bottom: 300}}
           src={urlFor(pageInfo?.heroImage).url()}
           className="relative rounded-full h-32 w-32 mx-auto object-cover"
           alt=""
